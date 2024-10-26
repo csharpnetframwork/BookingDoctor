@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookingDoctor</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BookingDoctor.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" asp-controller="Healthcare" asp-action="index">
+                <img src="https://media.istockphoto.com/id/1192100315/photo/heart-stethoscope-and-ekg.jpg?s=1024x1024&w=is&k=20&c=hyN9vVonvjf7vlOJ7dkjCJ0AAJ6SGNEMBrMWg6JMI6M=" alt="Krishan Logo" />
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Healthcare" asp-action="WhoWeAre">WHO WE ARE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Healthcare" asp-action="WhatWeDo">WHAT WE DO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Healthcare" asp-action="Society">KRISHAN & SOCIETY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Healthcare" asp-action="Investors">INVESTORS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Healthcare" asp-action="Brand">BRAND KRISHAN</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer text-muted">
+        <div class="container">
+            &copy; 2024 - Krishan Healthcare - <a href="/privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

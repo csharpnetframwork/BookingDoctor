@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Krishan  Healthcare";
+}
+
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <section class="text-center mt-5">
+
+            <img src="https://media.istockphoto.com/id/1130947395/photo/medical-icon-caduceus-rod-of-hermes.jpg?s=1024x1024&w=is&k=20&c=jQQOz_00sOCxC9UFX0B35qOlYNL-1kvZzQb4hn_9FJk=" alt="Healthcare Icon" class="healthcare-icon" />
+            <h1>Krishan Healthcare</h1>
+            <p class="lead">
+                Krishan Healthcare, a delivery arm of Krishan Group, is a nationwide network of multi-specialty clinics with a key focus on corporate health - adopting global best practices for medical quality and training, using evidence-based treatments and integrating advanced technology.
+            </p>
+            <button class="key-services">KEY SERVICES</button>
+        </section>
+
+        <section class="row text-center mt-5">
+            <div class="col-md-4">
+                <a href="@Url.Action("GeneralPractice", "Doctor")">
+                <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=1540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="General Practice" class="service-icon" />
+                <h5>General Practice<br />& Internal Medicine</h5>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Gynecology", "Doctor")">
+                <img src="https://plus.unsplash.com/premium_photo-1661779396815-56fe1ca9877c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gynecology" class="service-icon" />
+                <h5>Gynecology<br />& Pediatrics</h5>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("Diabetology", "Doctor")">
+                <img src="https://plus.unsplash.com/premium_photo-1702599120667-d86c2eb51ada?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diabetology" class="service-icon" />
+                <h5>Diabetology<br />& Pulmonology</h5>
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
