@@ -1,12 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<BookingDoctor.Models.Doctor>
+
 <h1>Diabetology Practice</h1>
-<p>Find available doctors for General Practice. Below is the hospital information:</p>
-<h2>Hospital Details</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hospital location and contact information are listed below.</p>
-<h2>Location</h2>
-<p>123 Healthcare Avenue, Cityville</p>
-<a href="@Url.Action("BookAppointment", "Doctor")" class="btn btn-primary">Book Appointment</a>
+<p>Our diabetology specialists provide comprehensive care for diabetes management:</p>
+
+<div class="row">
+    @foreach (var doctor in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. @doctor.FirstName</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@doctor.Hospital.Name</h6>
+                    <p class="card-text">
+                        <strong>Experience:</strong> @doctor.Experience years<br />
+                        <strong>Location:</strong> @doctor.Hospital.Location<br />
+                        <strong>Specializations:</strong> @doctor.Specialization
+                    </p>
+                    <a href="@Url.Action("BookAppointment", "Doctor", new { doctorId = doctor.DoctorId })"
+                       class="btn btn-primary">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

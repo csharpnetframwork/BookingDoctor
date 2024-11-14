@@ -1,0 +1,18 @@
+﻿@model BookingDoctor.Models.Doctor
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Dr. @Model.FirstName + @Model.LastName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Model.Hospital.Name</h6>
+        <p class="card-text">
+            <strong>Specialization:</strong> @Model.Specialization<br />
+            <strong>Experience:</strong> @Model.Experience years<br />
+            <strong>Location:</strong> @Model.Hospital.Location
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="@Url.Action("BookAppointment", "Doctor", new { doctorId = Model.DoctorId })"
+               class="btn btn-primary">Book Appointment</a>
+            
+        </div>
+    </div>
+</div>
